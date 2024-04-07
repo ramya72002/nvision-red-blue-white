@@ -1,0 +1,112 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Services",
+      "url": "/services"
+    },
+    {
+      "name": "Resources",
+      "url": "/resources"
+    },
+    {
+      "name": "News",
+      "url": "/news"
+    },
+    {
+      "name": "Recognition",
+      "url": "/recognition"
+    },
+    {
+      "name": "Public Sector",
+      "url": "/publicSector"
+    },
+    {
+      "name": "Careers",
+      "url": "/careers"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Address",
+      "menu": [
+        {
+          "text": "743 Spirit 40 Park Drive Suite 204 Chesterfield, MO 63005",
+          "url": "/"
+        },{
+          "text": "Email: info@nvisionit.com",
+          "url": "/"
+        },
+        {
+          "text": "Phone: +88 125 256 452",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "name": "Company",
+      "menu": [
+        {
+          "text": "Home",
+          "url": "/"
+        },
+        {
+          "text": "About",
+          "url": "/about"
+        },
+        {
+          "text": "Services",
+          "url": "/services"
+        },
+        {
+          "text": "Resources",
+          "url": "/resources"
+        },
+        {
+          "text": "News",
+          "url": "/news"
+        },
+        {
+          "text": "Recognition",
+          "url": "/recognition"
+        },
+        {
+          "text": "Public Sector",
+          "url": "/publicSector"
+        }
+      ]
+    },
+    {
+      "name": "Support",
+      "menu": [
+        {
+          "text": "Privacy Policy",
+          "url": "#"
+        },
+        {
+          "text": "Terms & Conditions",
+          "url": "#"
+        },
+        {
+          "text": "Careers",
+          "url": "/careers"
+        },
+        {
+          "text": "Contact",
+          "url": "/contact"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "base";
+}
+
+
+@layer components {
+  @import "components";
+  @import "navigation";
+  @import "buttons";
+}
+
+@layer utilities {
+  @import "utilities";
+}
+/* about.css */
+.section-box {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+}
+
+.section-content img {
+  margin-right: 20px; /* Adjust as needed for spacing between image and title/content */
+}
+
+.section-content div {
+  flex-grow: 1;
+}
+/* publicSector.module.css */
+
+.public-sector-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.public-sector-content {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+.section-about{
+  display: flex;
+  flex-direction: column;
+  border: "1px solid red";
+
+}
+
