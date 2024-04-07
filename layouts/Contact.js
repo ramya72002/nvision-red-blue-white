@@ -4,8 +4,9 @@ import { markdownify } from "@lib/utils/textConverter";
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
+  
   const showAlert = (message, title = 'Alert') => {
-     window.alert(`${title}: ${message}`);
+    window.alert(`${title}: ${message}`);
   }
 
   const handleSubmit = async (event) => {
@@ -36,9 +37,9 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <section className="section" style={{backgroundColor: '#87CEEB'}}>
+    <section className="section" style={{ backgroundColor: '#87CEEB' }}>
       <div className="container">
-        {markdownify(title, "h2", "text-4xl font-bold text-center mb-8")}
+        <h2 className="text-4xl font-bold text-center mb-8" style={{ color: 'red' }}>{title}</h2>
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
             <form
@@ -86,14 +87,14 @@ const Contact = ({ data }) => {
             </form>
           </div>
           <div className="content col-12 md:col-6 lg:col-5">
-            {markdownify(info.title, "h4")}
-            {markdownify(info.description, "p")}
-            <h4>Note:</h4>
+          <h4 style={{ color: 'red' }}>{info.title}</h4>
+                      {markdownify(info.description, "p")}
+            <h4 style={{ color: 'red' }}>Note:</h4>
             {markdownify(info.note, "p")}
             <ul className="contact-list mt-5">
               {info.contacts.map((contact, index) => (
                 <li key={index}>
-                  {markdownify(contact, "strong", "text-dark")}
+                  {markdownify(contact, "strong", "")}
                 </li>
               ))}
             </ul>

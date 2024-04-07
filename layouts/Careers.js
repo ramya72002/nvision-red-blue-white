@@ -19,22 +19,26 @@ const StyledTitle = styled(Typography)({
   fontSize: '24px',
   fontWeight: 'bold',
   marginBottom: '10px',
+  color:'red'
 });
 
 const StyledSubtitle = styled(Typography)({
   fontSize: '18px',
   fontWeight: 'bold',
   marginBottom: '5px',
+  color:'red'
 });
 
 const StyledDescription = styled(Typography)({
   fontSize: '16px',
   marginBottom: '10px',
+  // color:'red'
 });
 
 const StyledList = styled('ul')({
   listStyleType: 'disc',
   paddingLeft: '20px',
+  color:'red'
 });
 
 const Careers = ({ data }) => {
@@ -44,7 +48,7 @@ const Careers = ({ data }) => {
 
   return (
     <StyledContainer style={{ backgroundColor: '#87CEEB' }}>
-      <Typography variant="h3" className='text-4xl font-bold text-center mb-8 ' >
+      <Typography variant="h3" className='text-4xl font-bold text-center mb-8 'style={{color:"red"}} >
         {title}
       </Typography>
       {content.map((job, index) => (

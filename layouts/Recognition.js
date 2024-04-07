@@ -6,7 +6,7 @@ const Recognition = ({ data }) => {
 
   return (
     <Container style={{backgroundColor: "#87CEEB"}}>
-      <Typography variant="h3" align="center" sx={{ mt: 4, mb: 2 }}>
+      <Typography variant="h3" align="center" style={{color:"red"}} sx={{ mt: 4, mb: 2 }}>
         {title}
       </Typography>
       <Grid container spacing={2} justifyContent="center">

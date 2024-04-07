@@ -31,9 +31,9 @@ const Services = ({ data }) => {
   }, []); // Run this effect only once, similar to componentDidMount
 
   return (
-    <section className="bg-blue-300 py-16"> {/* Use blue color */}
+    <section className="bg-blue-400 py-16"> {/* Use blue color */}
       <div className="container mx-auto max-w-[1170px] px-4">
-        <h1 className="text-4xl font-bold text-center mb-8 text-white">{title}</h1> {/* Use white text color */}
+        <h1 className="text-4xl font-bold text-center mb-8  "style={{color:"red"}}>{title}</h1> {/* Use white text color */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
           {services.map((service, index) => (
@@ -50,14 +50,14 @@ const Services = ({ data }) => {
                 className="rounded-md mb-4"
                 style={{ height: '200px', width: '100%' }}
               />
-              <h2 className="text-xl font-bold mb-2">{service.title}</h2>
+              <h2 className="text-xl font-bold mb-2" style={{color:'red'}}>{service.title}</h2>
               <p className="mb-4">
                 {expandedServices.includes(index)
                   ? service.content
                   : `${service.content.substring(0, 100)}...`}
               </p>
               <button
-                className="text-blue-500 cursor-pointer focus:outline-none"
+                className="text-red-500 cursor-pointer focus:outline-none"
                 onClick={() => toggleService(index)}
               >
                 {expandedServices.includes(index) ? 'Show Less' : 'Show More'}

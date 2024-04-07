@@ -63,14 +63,14 @@ const News = ({ data }) => {
                 className="rounded-md mb-4"
                 style={{ height: '200px', width: '100%' }} // Set a fixed height for the images (adjust as needed)
               />
-              <h2 className="text-xl font-bold mb-2">{article.title}</h2>
+              <h2 className="text-xl font-bold mb-2" style={{color:"red"}}>{article.title}</h2>
               <p className="mb-4">
                 {expandedNews.includes(index)
                   ? article.content
                   : `${article.content.substring(0, 100)}...`}
               </p>
               <button
-                className="text-blue-500 cursor-pointer focus:outline-none"
+                className="text-red-500 cursor-pointer focus:outline-none"
                 onClick={() => toggleArticle(index)}
               >
                 {expandedNews.includes(index) ? 'Read Article' : 'Read More'}

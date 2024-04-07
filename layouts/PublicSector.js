@@ -14,7 +14,7 @@ const PublicSector = ({ data }) => {
 
   return (
     <Container style={{ backgroundColor: '#87CEEB', padding: '20px' }}>
-      <Typography variant="h4" className="text-4xl font-bold text-center mb-8"  >
+      <Typography variant="h4" className="text-4xl font-bold text-center mb-8" style={{color:"red"}}  >
         {title}
       </Typography>
 
