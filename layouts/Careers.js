@@ -47,8 +47,8 @@ const Careers = ({ data }) => {
   } = data;
 
   return (
-    <StyledContainer style={{ backgroundColor: '#87CEEB' }}>
-      <Typography variant="h3" className='text-4xl font-bold text-center mb-8 'style={{color:"red"}} >
+    <StyledContainer style={{ backgroundColor: '#00758b' }}>
+      <Typography variant="h3" className='text-4xl font-bold text-center mb-8 'style={{color:"white"}} >
         {title}
       </Typography>
       {content.map((job, index) => (

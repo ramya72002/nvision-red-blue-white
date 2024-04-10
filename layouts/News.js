@@ -39,9 +39,9 @@ const News = ({ data }) => {
   }, []); // Run this effect only once, similar to componentDidMount
 
   return (
-    <section className="bg-red py-16" style={{ backgroundColor: '#87CEEB' }}>
+    <section className=" py-16" style={{ backgroundColor: '#001861' }}>
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">{title}</h1>
+        <h1 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4"> {/* Changed grid layout */}
           {Articles.map((article, index) => (

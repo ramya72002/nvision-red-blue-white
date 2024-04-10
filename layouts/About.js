@@ -7,8 +7,8 @@ const About = ({ data }) => {
   } = data;
 
   return (
-    <div style={{ backgroundColor: ' ', padding: '20px' }}>
-      <Typography variant="h3" className='text-4xl font-bold text-center mb-8' style={{ color: 'red', marginBottom: '30px' }}>
+    <div style={{ backgroundColor: '#0000FF', padding: '20px' }}>
+      <Typography variant="h3" className='text-4xl font-bold text-center mb-8' style={{ color: 'white', marginBottom: '30px' }}>
         {title}
       </Typography>
       <Grid container spacing={2}>

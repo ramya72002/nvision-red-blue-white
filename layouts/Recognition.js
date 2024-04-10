@@ -5,8 +5,8 @@ const Recognition = ({ data }) => {
   const { frontmatter: { title, images } } = data;
 
   return (
-    <Container style={{backgroundColor: "#87CEEB"}}>
-      <Typography variant="h3" align="center" style={{color:"red"}} sx={{ mt: 4, mb: 2 }}>
+    <Container style={{backgroundColor: "#3a008b"}}>
+      <Typography variant="h3" align="center" style={{color:"white"}} sx={{ mt: 4, mb: 2 }}>
         {title}
       </Typography>
       <Grid container spacing={2} justifyContent="center">

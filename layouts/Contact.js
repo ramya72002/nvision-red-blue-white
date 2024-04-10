@@ -37,9 +37,9 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <section className="section" style={{ backgroundColor: '#87CEEB' }}>
+    <section className="section" style={{ backgroundColor: '#1c0e8b' }}>
       <div className="container">
-        <h2 className="text-4xl font-bold text-center mb-8" style={{ color: 'red' }}>{title}</h2>
+        <h2 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h2>
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
             <form
@@ -88,15 +88,16 @@ const Contact = ({ data }) => {
           </div>
           <div className="content col-12 md:col-6 lg:col-5">
           <h4 style={{ color: 'red' }}>{info.title}</h4>
-                      {markdownify(info.description, "p")}
+          <span style={{ color: 'white' }}>{markdownify(info.description, "p")}</span>
             <h4 style={{ color: 'red' }}>Note:</h4>
-            {markdownify(info.note, "p")}
-            <ul className="contact-list mt-5">
-              {info.contacts.map((contact, index) => (
-                <li key={index}>
-                  {markdownify(contact, "strong", "")}
-                </li>
-              ))}
+            <span style={{ color: 'white' }}>{markdownify(info.note, "p")}</span>
+            <ul className="contact-list mt-5" style={{ color: 'white' }}>
+            {info.contacts.map((contact, index) => (
+  <li key={index} style={{ color: 'white' }}>
+    <strong style={{ color: 'white' }}>{markdownify(contact)}</strong>
+  </li>
+))}
+
             </ul>
           </div>
         </div>

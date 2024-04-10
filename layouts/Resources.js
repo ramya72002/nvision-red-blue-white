@@ -6,8 +6,8 @@ const Resources = ({ data }) => {
   const { frontmatter: { title, Resources } } = data;
 
   return (
-    <Container style={{backgroundColor:"#60A5FA"}} >
-      <Typography variant="h3" align="center" sx={{ mt: 4, mb: 2 }} style={{color:"red"}}>
+    <Container style={{backgroundColor:"#41729F"}} >
+      <Typography variant="h3" align="center" sx={{ mt: 4, mb: 2 }} style={{color:"white"}}>
         {title}
       </Typography>
       <Grid container spacing={5} justifyContent="center">

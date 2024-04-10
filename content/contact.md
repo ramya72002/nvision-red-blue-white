@@ -8,7 +8,7 @@ info:
   note: Your e-mail address and all other personal information will not be shared with any party. All information is kept strictly confidential.
   contacts: 
     - "phone: +88 125 256 452"
-    - "Mail: [info@nvisionit.com](mailto:info@nvisionit.com)"
+    - "Mail: info@nvisionit.com"
     - "Address: 743 Spirit 40 Park Drive
                 Suite 204
                 Chesterfield, MO 63005"

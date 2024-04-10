@@ -31,9 +31,9 @@ const Services = ({ data }) => {
   }, []); // Run this effect only once, similar to componentDidMount
 
   return (
-    <section className="bg-blue-400 py-16"> {/* Use blue color */}
+    <section className="py-16" style={{ backgroundColor: '#0000A3'}}> {/* Use blue color */}
       <div className="container mx-auto max-w-[1170px] px-4">
-        <h1 className="text-4xl font-bold text-center mb-8  "style={{color:"red"}}>{title}</h1> {/* Use white text color */}
+        <h1 className="text-4xl font-bold text-center mb-8  "style={{color:"white"}}>{title}</h1> {/* Use white text color */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
           {services.map((service, index) => (
