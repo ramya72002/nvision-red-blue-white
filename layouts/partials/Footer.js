@@ -10,18 +10,18 @@ const Footer = () => {
   const { copyright, footer_content } = config.params;
   const { footer } = menu;
   return (
-    <footer className="section bg-theme-light pb-0">
-      <div className="container">
+    <footer className="section bg-theme-light pb-0" style={{ color: 'white' }}>
+      <div className="container" style={{ color: 'white' }}>
         {/* footer menu */}
-        <div className="row">
+        <div className="row" style={{ color: 'white' }}>
           {footer.map((col) => {
             return (
-              <div className="mb-12 sm:col-6 lg:col-3" key={col.name}>
-                {markdownify(col.name, "h2", "h4")}
-                <ul className="mt-6">
+              <div style={{ color: 'white' }} className="mb-12 sm:col-6 lg:col-3" key={col.name}  >
+                <span style={{ color: 'white' }}>{markdownify(col.name, "h3")}</span>
+                <ul className="mt-6" style={{ color: 'white' }}>
                   {col?.menu.map((item) => (
-                    <li className="mb-1" key={item.text}>
-                      <Link href={item.url} rel="">
+                    <li className="mb-1" key={item.text} style={{ color: 'white' }}>
+                      <Link href={item.url} rel="" style={{ color: 'white' }}>
                         {item.text}
                       </Link>
                     </li>
@@ -31,7 +31,7 @@ const Footer = () => {
             );
           })}
           {/* social icons */}
-          <div className="md-12 sm:col-6 lg:col-3">
+          <div className="md-12 sm:col-6 lg:col-3" style={{ color: 'white' }}>
             <Link href="/" aria-label="Nvision">
               <Image
                 src={config.site.logo}
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
         {/* copyright */}
-        <div className="border-t border-border py-6">
+        <div className="border-t border-border py-6" style={{ color: 'white' }}>
           {markdownify(copyright, "p", "text-sm text-center")}
         </div>
       </div>
