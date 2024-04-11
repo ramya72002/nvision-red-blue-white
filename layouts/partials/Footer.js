@@ -17,7 +17,7 @@ const Footer = () => {
           {footer.map((col) => {
             return (
               <div style={{ color: 'white' }} className="mb-12 sm:col-6 lg:col-3" key={col.name}  >
-                <span style={{ color: 'white' }}>{markdownify(col.name, "h3")}</span>
+                <span style={{ color: 'white' }}>{markdownify(col.name, "h7")}</span>
                 <ul className="mt-6" style={{ color: 'white' }}>
                   {col?.menu.map((item) => (
                     <li className="mb-1" key={item.text} style={{ color: 'white' }}>
