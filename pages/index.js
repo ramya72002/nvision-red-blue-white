@@ -84,8 +84,8 @@ const Home = ({ frontmatter }) => {
       {/* services */}
 {services.map((service, index) => {
   const isOdd = index % 2 > 0;
-  const sectionClasses = `section ${isOdd ? "bg-theme-light" : ""}`;
-  const contentTextColor = isOdd ? "text-white" : ""; // Set text color to white for bg-theme-light sections
+  const sectionClasses = `section ${isOdd ? "bg-theme-light" : "red"}`;
+  const contentTextColor = isOdd ? "text-white" : "red"; // Set text color to white for bg-theme-light sections
 
   return (
     <section key={`service-${index}`} className={sectionClasses}>

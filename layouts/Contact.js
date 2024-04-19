@@ -37,7 +37,7 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <section className="section" style={{ backgroundColor: '#1c0e8b' }}>
+    <section className="section" style={{ backgroundColor: '#00308F' }}>
       <div className="container">
         <h2 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h2>
         <div className="section row pb-0">

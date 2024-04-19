@@ -6,7 +6,7 @@ const Resources = ({ data }) => {
   const { frontmatter: { title, Resources } } = data;
 
   return (
-    <Container style={{backgroundColor:"#41729F"}} >
+    <Container style={{backgroundColor:"#00308F"}} >
       <Typography variant="h3" align="center" sx={{ mt: 4, mb: 2 }} style={{color:"white"}}>
         {title}
       </Typography>

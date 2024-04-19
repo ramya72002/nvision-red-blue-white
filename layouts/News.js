@@ -1,18 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles((theme) => ({
+  articleItem: {
+    padding: '20px',
+    borderRadius: '15px',
+    boxShadow: '0px 20px 30px -10px rgb(38, 57, 77)',
+    width: '100%',
+    maxWidth: '500px',
+    margin: 'auto',
+    transition: 'transform 0.3s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.01)',
+    },
+  },
+}));
 
 const News = ({ data }) => {
+  const classes = useStyles();
+  const router = useRouter();
+
   const {
     frontmatter: { title, Articles },
   } = data;
 
   const [expandedNews, setExpandedNews] = useState([]);
   const [visible, setVisible] = useState(Array(Articles.length).fill(false));
-  const router = useRouter();
 
   const toggleArticle = (index) => {
     if (expandedNews.includes(index)) {
-      // Redirect to the article link when "Show Article" is clicked
       const articleLink = Articles[index].link;
       router.push(articleLink);
     } else {
@@ -39,7 +56,7 @@ const News = ({ data }) => {
   }, []); // Run this effect only once, similar to componentDidMount
 
   return (
-    <section className=" py-16" style={{ backgroundColor: '#001861' }}>
+    <section className="py-16" style={{ backgroundColor: '#00308F' }}>
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h1>
 
@@ -47,23 +64,15 @@ const News = ({ data }) => {
           {Articles.map((article, index) => (
             <div
               key={index}
-              className={`bg-white p-6 rounded-md ${
-                visible[index] ? 'fade-in shadow-md' : 'invisible'
-              }`}
-              style={{
-                boxShadow: 'rgb(38, 57, 77) 0px 20px 30px -10px',
-                width: '100%',
-                maxWidth: '500px', // Adjust max-width as needed
-                margin: 'auto', // Center align on smaller screens
-              }}
+              className={`${classes.articleItem} bg-white p-6 rounded-md${visible[index] ? '' : 'invisible'}`}
             >
               <img
                 src={article.image}
                 alt={`article ${index + 1}`}
                 className="rounded-md mb-4"
-                style={{ height: '200px', width: '100%' }} // Set a fixed height for the images (adjust as needed)
+                style={{ height: '200px', width: '100%' }}
               />
-              <h2 className="text-xl font-bold mb-2" style={{color:"red"}}>{article.title}</h2>
+              <h2 className="text-xl font-bold mb-2" style={{ color: 'red', textDecoration: 'underline' }}>{article.title}</h2>
               <p className="mb-4">
                 {expandedNews.includes(index)
                   ? article.content
