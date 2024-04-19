@@ -16,7 +16,7 @@ After successfully installing those dependencies, open this template with any ID
 * Install dependencies
 
 ```
-npm install
+npm install --force
 ```
 
 * Run locally
