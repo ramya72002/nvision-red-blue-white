@@ -1,26 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/system';
 
-const useStyles = makeStyles((theme) => ({
-  serviceItem: {
-    // backgroundColor: theme.palette.background.paper,
-    padding: '20px',
-    borderRadius: '15px',
-    boxShadow: '0px 20px 30px -10px rgb(38, 57, 77)',
-    width: '90%',
-    margin: 'auto',
-    maxWidth: '500px',
-    transition: 'transform 0.3s ease-in-out',
-    '&:hover': {
-      transform: 'scale(1.01)',
-    },
+const StyledServiceItem = styled('div')({
+  padding: '20px',
+  borderRadius: '15px',
+  boxShadow: '0px 20px 30px -10px rgb(38, 57, 77)',
+  width: '90%',
+  margin: 'auto',
+  maxWidth: '500px',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.01)',
   },
-}));
+});
 
 const Services = ({ data }) => {
-  const classes = useStyles();
-  
-
   const {
     frontmatter: { title, services },
   } = data;
@@ -57,17 +51,17 @@ const Services = ({ data }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
           {services.map((service, index) => (
-            <div
+            <StyledServiceItem
               key={index}
-              className={`${classes.serviceItem} bg-white p-6 rounded-md mt-8 ${visible[index] ? '' : 'invisible'}`}
-              >
+              className={`bg-white p-6 rounded-md mt-8 ${visible[index] ? '' : 'invisible'}`}
+            >
               <img
                 src={service.image}
                 alt={`Service ${index + 1}`}
                 className="rounded-md mb-4"
                 style={{ height: '200px', width: '100%' }}
               />
-              <h2 className="text-xl font-bold mb-2"  style={{ color: 'red', textDecoration: 'underline' }}>{service.title}</h2>
+              <h2 className="text-xl font-bold mb-2" style={{ color: 'red', textDecoration: 'underline' }}>{service.title}</h2>
               <p className="mb-4">
                 {expandedServices.includes(index)
                   ? service.content
@@ -79,7 +73,7 @@ const Services = ({ data }) => {
               >
                 {expandedServices.includes(index) ? 'Show Less' : 'Show More'}
               </button>
-            </div>
+            </StyledServiceItem>
           ))}
         </div>
       </div>

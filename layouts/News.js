@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/system';
 
-const useStyles = makeStyles((theme) => ({
-  articleItem: {
-    padding: '20px',
-    borderRadius: '15px',
-    boxShadow: '0px 20px 30px -10px rgb(38, 57, 77)',
-    width: '100%',
-    maxWidth: '500px',
-    margin: 'auto',
-    transition: 'transform 0.3s ease-in-out',
-    '&:hover': {
-      transform: 'scale(1.01)',
-    },
+const ArticleItem = styled('div')(({ theme }) => ({
+  padding: '20px',
+  borderRadius: '15px',
+  boxShadow: '0px 20px 30px -10px rgb(38, 57, 77)',
+  width: '100%',
+  maxWidth: '500px',
+  margin: 'auto',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.01)',
   },
 }));
 
 const News = ({ data }) => {
-  const classes = useStyles();
   const router = useRouter();
 
   const {
@@ -62,9 +59,9 @@ const News = ({ data }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4"> {/* Changed grid layout */}
           {Articles.map((article, index) => (
-            <div
+            <ArticleItem
               key={index}
-              className={`${classes.articleItem} bg-white p-6 rounded-md${visible[index] ? '' : 'invisible'}`}
+              className={`bg-white p-6 rounded-md${visible[index] ? '' : 'invisible'}`}
             >
               <img
                 src={article.image}
@@ -84,7 +81,7 @@ const News = ({ data }) => {
               >
                 {expandedNews.includes(index) ? 'Read Article' : 'Read More'}
               </button>
-            </div>
+            </ArticleItem>
           ))}
         </div>
       </div>
