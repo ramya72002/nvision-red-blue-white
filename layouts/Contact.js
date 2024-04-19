@@ -1,5 +1,7 @@
 import React from 'react';
 import { markdownify } from "@lib/utils/textConverter";
+import EmailIcon from '@mui/icons-material/Email';
+import { IconButton } from '@mui/material';
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -37,8 +39,8 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <section className="section" style={{ backgroundColor: '#00308F' }}>
-      <div className="container">
+    <section className="section" style={{ backgroundColor: '#00308F', padding: '50px 0' }}>
+      <div className="container" style={{ padding: '0 15px' }}>
         <h2 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h2>
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
@@ -86,18 +88,20 @@ const Contact = ({ data }) => {
               </button>
             </form>
           </div>
-          <div className="content col-12 md:col-6 lg:col-5">
-          <h4 style={{ color: 'red' }}>{info.title}</h4>
-          <span style={{ color: 'white' }}>{markdownify(info.description, "p")}</span>
+          <div className="content col-12 md:col-6 lg:col-5" style={{ padding: '0 15px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+              <EmailIcon style={{ color: 'red', marginRight: '0.5rem' }} />
+              <h4 style={{ color: 'red', marginBottom: 0 }}>{info.title}</h4>
+            </div>
+            <div style={{ color: 'white' }}>{markdownify(info.description, "p")}</div>
             <h4 style={{ color: 'red' }}>Note:</h4>
-            <span style={{ color: 'white' }}>{markdownify(info.note, "p")}</span>
+            <div style={{ color: 'white' }}>{markdownify(info.note, "p")}</div>
             <ul className="contact-list mt-5" style={{ color: 'white' }}>
-            {info.contacts.map((contact, index) => (
-  <li key={index} style={{ color: 'white' }}>
-    <strong style={{ color: 'white' }}>{markdownify(contact)}</strong>
-  </li>
-))}
-
+              {info.contacts.map((contact, index) => (
+                <li key={index} style={{ color: 'white' }}>
+                  <strong style={{ color: 'white' }}>{markdownify(contact)}</strong>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
