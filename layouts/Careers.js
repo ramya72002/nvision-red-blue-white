@@ -1,10 +1,11 @@
 import React from 'react';
-import { Typography, Grid, Paper } from '@mui/material';
+import { Typography, Paper, Button, Link } from '@mui/material';
 import { styled } from '@mui/system';
+import { BsArrowRight } from 'react-icons/bs'; // Importing an arrow icon
 
 // Styled components for custom styling
 const StyledContainer = styled('div')({
-  backgroundColor: '#F5F5F5',
+  backgroundColor: '#00308F',
   padding: '40px 20px',
 });
 
@@ -45,19 +46,28 @@ const StyledList = styled('ul')({
   color: 'red',
 });
 
+const StyledApplyButton = styled(Button)({
+  marginTop: '20px',
+  backgroundColor: 'red',
+  color: 'white',
+  '&:hover': {
+    backgroundColor: '#FF6347', // Lighter shade of red on hover
+  },
+});
+
 const Careers = ({ data }) => {
   const {
     frontmatter: { title, content },
   } = data;
 
   return (
-    <StyledContainer style={{ backgroundColor: '#00308F' }}>
+    <StyledContainer>
       <Typography variant="h3" className='text-4xl font-bold text-center mb-8 ' style={{ color: "white" }}>
         {title}
       </Typography>
       {content.map((job, index) => (
-        <StyledJobPaper key={index} style={{ backgroundColor: '' }}>
-          <StyledTitle style={{ backgroundColor: '',textDecoration:'underline' }}>{job.title}</StyledTitle>
+        <StyledJobPaper key={index}>
+          <StyledTitle>{job.title}</StyledTitle>
           <StyledSubtitle>Primary Responsibilities:</StyledSubtitle>
           <StyledDescription>{job.primary}</StyledDescription>
           <StyledSubtitle>Description:</StyledSubtitle>
@@ -70,6 +80,13 @@ const Careers = ({ data }) => {
           </StyledList>
           <StyledSubtitle>Apply Instructions:</StyledSubtitle>
           <StyledDescription>{job.applyInstructions}</StyledDescription>
+          <Link href="/contact" underline="none">
+            <StyledApplyButton
+              endIcon={<BsArrowRight />} // Adding an arrow icon to the button
+            >
+              Apply Now
+            </StyledApplyButton>
+          </Link>
         </StyledJobPaper>
       ))}
     </StyledContainer>
