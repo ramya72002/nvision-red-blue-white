@@ -91,14 +91,6 @@
       "name": "Support",
       "menu": [
         {
-          "text": "Privacy Policy",
-          "url": "#"
-        },
-        {
-          "text": "Terms & Conditions",
-          "url": "#"
-        },
-        {
           "text": "Careers",
           "url": "/careers"
         },

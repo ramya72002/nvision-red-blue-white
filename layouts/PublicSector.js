@@ -5,9 +5,9 @@ import { styled } from '@mui/system';
 const CustomPaper = styled(Paper)(({ theme }) => ({
   transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out',
   '&:hover': {
-    transform: 'scale(1.01)',
-    boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.3)',
-    opacity: 0.9,
+    transform: 'scale(1.03)', // Increased scale on hover
+    boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.5)', // Increased shadow on hover
+    opacity: 0.95, // Slightly reduced opacity on hover
   },
 }));
 
@@ -28,11 +28,11 @@ const PublicSector = ({ data }) => {
         {title}
       </Typography>
 
-      <CustomPaper elevation={3} sx={{ p: 4, backgroundColor: '' }}>
+      <CustomPaper elevation={3} sx={{ p: 4, backgroundColor: '#F3F3F3', borderRadius: '10px' }}>
         <Typography variant="h6" style={{ color: '#333333' }}>{content}</Typography>
       </CustomPaper>
 
-      <CustomPaper elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '' }}>
+      <CustomPaper elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '#F3F3F3', borderRadius: '10px' }}>
         <Typography variant="h5" style={{ color: '#333333' }}>Certifications:</Typography>
         <ul>
           {certifications.map((certification, index) => (
@@ -41,7 +41,7 @@ const PublicSector = ({ data }) => {
         </ul>
       </CustomPaper>
 
-      <CustomPaper elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '' }}>
+      <CustomPaper elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '#F3F3F3', borderRadius: '10px' }}>
         <Typography variant="h4" style={{ color: '#333333' }}>Acquisition:</Typography>
         <Grid container spacing={3}>
           <Grid item xs={6}>
@@ -63,18 +63,17 @@ const PublicSector = ({ data }) => {
         </Grid>
       </CustomPaper>
 
-      <CustomPaper elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '' }}>
+      <CustomPaper elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '#F3F3F3', borderRadius: '10px' }}>
         <Typography variant="h4" style={{ color: '#333333' }}>Contract Vehicles:</Typography>
         {Object.keys(contractVehicles).map((vehicle, index) => (
-          <Paper key={index} elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '#ADD8E6' }}>
+          <Paper key={index} elevation={3} sx={{ p: 4, margin: 0, mt: 3, backgroundColor: '#ADD8E6', borderRadius: '10px' }}>
             <Typography variant="h5">{vehicle}</Typography>
             <Typography>{contractVehicles[vehicle]}</Typography>
           </Paper>
         ))}
       </CustomPaper>
       {/* Add space above the footer */}
-      <div style={{ marginTop: '20px' }}>
-      </div>
+      <div style={{ marginTop: '20px' }}></div>
     </Container>
   );
 };
