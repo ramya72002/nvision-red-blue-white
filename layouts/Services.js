@@ -2,16 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/system';
 
 const StyledServiceItem = styled('div')({
+  display: 'flex', // Display items in a flex container
+  alignItems: 'center', // Center items vertically
   padding: '20px',
   borderRadius: '15px',
   boxShadow: '0px 20px 30px -10px rgb(38, 57, 77)',
-  width: '90%',
-  margin: 'auto',
-  maxWidth: '500px',
-  transition: 'transform 0.3s ease-in-out',
+  transition: 'transform 0.3s ease-in-out', // Add transition for zoom effect
+  overflow: 'hidden', // Hide overflow content if it exceeds the specified height
   '&:hover': {
-    transform: 'scale(1.01)',
+    transform: 'scale(1.01)', // Zoom in effect on hover
   },
+});
+
+const StyledImage = styled('img')({
+  width: '20%', // Set width of image container
+  borderRadius: '20px', // Rounded corners for image container
+  marginRight: '20px', // Add margin to the right for spacing between image and content
+});
+
+const StyledContent = styled('div')({
+  flex: '1', // Take up remaining space for the content
 });
 
 const Services = ({ data }) => {
@@ -19,63 +29,47 @@ const Services = ({ data }) => {
     frontmatter: { title, services },
   } = data;
 
-  const [expandedServices, setExpandedServices] = useState([]);
-  const [visible, setVisible] = useState(Array(services.length).fill(false));
-
-  const toggleService = (index) => {
-    setExpandedServices((prev) =>
-      prev.includes(index) ? prev.filter((item) => item !== index) : [...prev, index]
-    );
-  };
+  const [expandedServiceIndex, setExpandedServiceIndex] = useState(null); // Track index of the expanded service
 
   useEffect(() => {
-    const timeoutIds = services.map((service, index) =>
-      setTimeout(() => {
-        setVisible((prev) => {
-          const newState = [...prev];
-          newState[index] = true;
-          return newState;
-        });
-      }, index * 200)
-    );
-
+    // Reset expanded service index when component unmounts
     return () => {
-      timeoutIds.forEach((timeoutId) => clearTimeout(timeoutId));
+      setExpandedServiceIndex(null);
     };
-  }, []); // Run this effect only once, similar to componentDidMount
+  }, []);
 
   return (
     <section className="py-16" style={{ backgroundColor: '#0039a6' }}>
-      <div className="container mx-auto max-w-[1170px] px-4">
+      <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-          {services.map((service, index) => (
-            <StyledServiceItem
-              key={index}
-              className={`bg-white p-6 rounded-md mt-8 ${visible[index] ? '' : 'invisible'}`}
-            >
-              <img
-                src={service.image}
-                alt={`Service ${index + 1}`}
-                className="rounded-md mb-4"
-                style={{ height: '200px', width: '100%' }}
-              />
+        {services.map((service, index) => (
+          <StyledServiceItem
+            key={index}
+            className={`bg-white p-6 rounded-md mt-8`}
+            style={{
+              height: expandedServiceIndex === index ? 'auto' : '300px', // Set height based on whether the service is expanded
+              flexDirection: index % 2 === 0 ? 'row' : 'row-reverse', // Reverse flex direction for odd indices
+            }}
+          >
+            <StyledImage
+              src={service.image}
+              alt={`Service ${index + 1}`}
+            />
+            <StyledContent>
               <h2 className="text-xl font-bold mb-2" style={{ color: 'red', textDecoration: 'underline' }}>{service.title}</h2>
               <p className="mb-4">
-                {expandedServices.includes(index)
-                  ? service.content
-                  : `${service.content.substring(0, 100)}...`}
+                {expandedServiceIndex === index ? service.content : `${service.content.substring(0, 600)}...`}
               </p>
               <button
                 className="text-red-500 cursor-pointer focus:outline-none"
-                onClick={() => toggleService(index)}
+                onClick={() => setExpandedServiceIndex(expandedServiceIndex === index ? null : index)}
               >
-                {expandedServices.includes(index) ? 'Show Less' : 'Show More'}
+                {expandedServiceIndex === index ? 'Show Less' : 'Show More'}
               </button>
-            </StyledServiceItem>
-          ))}
-        </div>
+            </StyledContent>
+          </StyledServiceItem>
+        ))}
       </div>
     </section>
   );
