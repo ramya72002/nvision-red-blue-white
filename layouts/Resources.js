@@ -6,8 +6,8 @@ const Resources = ({ data }) => {
   const { frontmatter: { title, Resources } } = data;
 
   return (
-    <Container style={{backgroundColor:"#00308F"}} >
-      <Typography variant="h3" align="center" sx={{ mt: 4, mb: 2 }} style={{color:"white"}}>
+    <div style={{backgroundColor:"#00308F", paddingTop: '40px', paddingBottom: '40px'}}>
+      <Typography variant="h3" align="center" style={{color:"white", marginBottom: '30px'}}>
         {title}
       </Typography>
       <Grid container spacing={5} justifyContent="center">
@@ -16,23 +16,25 @@ const Resources = ({ data }) => {
             <Link href={resource.link} underline="none" target="_blank" rel="noopener noreferrer">
               <Card
                 sx={{
-                  backgroundColor: ' ',
-                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255, 255, 255, 0.9)', // Set background color to off-white with slight transparency
+                  borderRadius: '10px',
                   overflow: 'hidden',
                   width: 250,
                   height: 250,
-                  transition: 'background-color 0.3s', // Smooth transition effect
+                  boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.1)', // Add subtle shadow effect
+                  transition: 'transform 0.3s, box-shadow 0.3s', // Smooth transition effect for transform and box-shadow
                   ':hover': {
-                    backgroundColor: '#FF9999', // Light red color on hover
+                    transform: 'scale(1.05)', // Scale up the card on hover
+                    boxShadow: '0px 15px 30px rgba(0, 0, 0, 0.2)', // Darken the shadow on hover
                   },
                 }}
               >
                 <CardMedia
                   component={FileOpenRoundedIcon}
-                  sx={{ fontSize: 100, color: 'red' }} // Set the color to red
+                  sx={{ fontSize: 100, color: '#FF6347' }} // Set the color to a shade of red
                 />
                 <CardContent>
-                  <Typography variant="h6" align="center" style={{ textDecoration: 'underline' }}>
+                  <Typography variant="h6" align="center" style={{ fontWeight: 'bold', color: '#00308F' }}>
                     {resource.title}
                   </Typography>
                 </CardContent>
@@ -41,7 +43,7 @@ const Resources = ({ data }) => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </div>
   );
 };
 
