@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/system';
 
+// Styled components for custom styling
 const StyledServiceItem = styled('div')({
   display: 'flex', // Display items in a flex container
   alignItems: 'center', // Center items vertically
@@ -39,7 +40,7 @@ const Services = ({ data }) => {
   }, []);
 
   return (
-    <section className="py-16" style={{ backgroundColor: '#0039a6' }}>
+    <section className="py-16" style={{ backgroundImage: `url('/images/bg18.jpg')`, backgroundSize: 'cover', backgroundColor: '#0039a6' }}>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h1>
 

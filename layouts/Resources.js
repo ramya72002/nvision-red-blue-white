@@ -6,8 +6,8 @@ const Resources = ({ data }) => {
   const { frontmatter: { title, Resources } } = data;
 
   return (
-    <div style={{backgroundColor:"#00308F", paddingTop: '40px', paddingBottom: '40px'}}>
-      <Typography variant="h3" align="center" style={{color:"white", marginBottom: '30px'}}>
+    <div style={{ backgroundImage: `url('/images/bg19.jpg')`, backgroundSize: 'cover', paddingTop: '40px', paddingBottom: '40px' }}>
+      <Typography variant="h3" align="center" style={{ color: "white", marginBottom: '30px' }}>
         {title}
       </Typography>
       <Grid container spacing={5} justifyContent="center">

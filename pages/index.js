@@ -48,10 +48,11 @@ const Home = ({ frontmatter }) => {
           </Swiper>
         </div>
       </section>
+      /<div></div>
       
 
       {/* Features */}
-      <section className="section bg-theme-light">
+      <section className="section bg-theme-light" style={{ backgroundImage: `url('/images/bg21.jpg')` }}>
       <div className="container">
         <div className="text-center">
           <h2 style={{ color: 'white' }}>{markdownify(feature.title)}</h2>
@@ -116,6 +117,7 @@ const Home = ({ frontmatter }) => {
 
           {/* Content */}
           <div
+          
             className={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"}`}
           >
             <h2 className={`font-bold leading-[40px] ${contentTextColor}`}>{service?.title}</h2>

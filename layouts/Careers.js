@@ -7,6 +7,8 @@ import { BsArrowRight } from 'react-icons/bs'; // Importing an arrow icon
 const StyledContainer = styled('div')({
   backgroundColor: '#F8F9FA', // Light gray background color
   padding: '40px',
+  backgroundImage: `url('/images/bg6.jpg')`, // Background image
+  backgroundSize: 'cover',
 });
 
 const StyledJobPaper = styled(Paper)({
@@ -73,7 +75,7 @@ const Careers = ({ data }) => {
 
   return (
     <StyledContainer>
-      <Typography variant="h3" className='text-4xl font-bold text-center mb-8' style={{ color: "#00308F", marginBottom: '40px' }}>
+      <Typography variant="h3" className='text-4xl font-bold text-center mb-8' style={{ color: "white", marginBottom: '40px' }}>
         {title}
       </Typography>
       {content.map((job, index) => (

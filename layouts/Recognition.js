@@ -5,8 +5,8 @@ const Recognition = ({ data }) => {
   const { frontmatter: { title, images } } = data;
 
   return (
-    <Container style={{backgroundColor: "#00308F", paddingTop: '40px', paddingBottom: '40px'}}>
-      <Typography variant="h3" align="center" style={{color:"white", marginBottom: '30px'}} >
+    <div style={{ backgroundImage: `url('/images/bg13.jpg')`, backgroundSize: 'cover', paddingTop: '40px', paddingBottom: '40px' }}>
+      <Typography variant="h3" align="center" style={{ color: "white", marginBottom: '30px' }} >
         {title}
       </Typography>
       <Grid container spacing={2} justifyContent="center">
@@ -24,7 +24,7 @@ const Recognition = ({ data }) => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </div>
   );
 };
 

@@ -53,7 +53,7 @@ const News = ({ data }) => {
   }, []); // Run this effect only once, similar to componentDidMount
 
   return (
-    <section className="py-16" style={{ backgroundColor: '#00308F' }}>
+    <section className="py-16" style={{ backgroundImage: `url('/images/bg.jpg')`, backgroundSize: 'cover' }}>
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8" style={{ color: 'white' }}>{title}</h1>
 
