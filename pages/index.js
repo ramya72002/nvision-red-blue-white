@@ -84,40 +84,40 @@ const Home = ({ frontmatter }) => {
     </section>
 
       {/* services */}
-{services.map((service, index) => {
+      {services.map((service, index) => {
   const isOdd = index % 2 > 0;
-  const sectionClasses = `section ${isOdd ? "bg-theme-light" : "red"}`;
+  const sectionClasses = `section ${isOdd ? "bg-theme-light" : ""}`; // Add "bg-theme-light" class for odd-indexed sections
+  const backgroundImage = isOdd ?  `url('/images/bg21.jpg')` : ""; // Add background image for odd-indexed sections
   const contentTextColor = isOdd ? "text-white" : "red"; // Set text color to white for bg-theme-light sections
 
   return (
-    <section key={`service-${index}`} className={sectionClasses}>
+    <section key={`service-${index}`} className={sectionClasses} style={{backgroundImage}}>
       <div className="container">
         <div className="items-center gap-8 md:grid md:grid-cols-2">
           {/* Carousel */}
           <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
-          <Swiper
-                    modules={[Autoplay, Pagination]}
-                    pagination={
-                      service.images.length > 1 ? { clickable: true } : false
-                    }
-                    autoplay={{
-                      delay: 5000,
-                      disableOnInteraction: false,
-                    }}
-                    init={service?.images > 1 ? false : true}
-                  >
-                    {/* Slides */}
-                    {service?.images.map((slide, index) => (
-                      <SwiperSlide key={index}>
-                        <Image src={slide} alt="" width={600} height={500} />
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              pagination={
+                service.images.length > 1 ? { clickable: true } : false
+              }
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              init={service?.images > 1 ? false : true}
+            >
+              {/* Slides */}
+              {service?.images.map((slide, index) => (
+                <SwiperSlide key={index}>
+                  <Image src={slide} alt="" width={600} height={500} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           {/* Content */}
           <div
-          
             className={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"}`}
           >
             <h2 className={`font-bold leading-[40px] ${contentTextColor}`}>{service?.title}</h2>
