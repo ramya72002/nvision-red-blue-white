@@ -1,12 +1,10 @@
 import React from 'react';
 import { Typography, Grid, Paper } from '@mui/material';
-import ImageIcon from '@mui/icons-material/Image';
 import { styled } from '@mui/system';
 
 const SectionBox = styled(Paper)(({ theme }) => ({
   padding: '20px',
   borderRadius: '20px',
-  backgroundColor: '',
   position: 'relative',
   overflow: 'hidden',
   transition: 'transform 0.3s ease-in-out',
@@ -45,7 +43,7 @@ const About = ({ data }) => {
   } = data;
 
   return (
-    <div style={{ backgroundColor: '#00308F', padding: '20px' }}>
+    <div style={{ backgroundImage: `url('/images/bg24.jpg')`, padding: '20px' }}>
       <Typography variant="h3" className='text-4xl font-bold text-center mb-8' style={{ color: 'white', marginBottom: '30px' }}>
         {title}
       </Typography>
