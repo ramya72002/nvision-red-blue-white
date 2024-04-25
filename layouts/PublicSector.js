@@ -23,52 +23,55 @@ const PublicSector = ({ data }) => {
   } = data;
 
   return (
-    <div style={{ backgroundColor: '#00308F', padding: '40px', color: '#fff' }}>
+    <div style={{ color:'white',  backgroundImage: `url('/images/bg21.jpg')`,
+    padding: '40px', color: '#fff' }}>
       <Typography style={{ color: 'white'}} variant="h3" align="center" gutterBottom>
         {title}
       </Typography>
 
-      <CustomPaper elevation={3} sx={{ p: 4, backgroundColor: 'white', borderRadius: '10px', marginBottom: '40px' }}>
-        <Typography variant="body1" style={{ color: '#333333', lineHeight: '1.6' }}>{content}</Typography>
+      <CustomPaper elevation={3} sx={{ p: 4,color:'white',backgroundImage: `url('/images/bg.jpg')`,
+ borderRadius: '10px', marginBottom: '40px' }}>
+        <Typography variant="body1" style={{  lineHeight: '1.6' }}>{content}</Typography>
       </CustomPaper>
 
-      <CustomPaper elevation={3} sx={{ p: 4, backgroundColor: 'white', borderRadius: '10px', marginBottom: '40px' }}>
-        <Typography variant="h4" gutterBottom style={{ color: '#00308F', fontWeight: 'bold', marginBottom: '20px' }}>Certifications:</Typography>
+      <CustomPaper elevation={3} sx={{ p: 4, color:'white',backgroundImage: `url('/images/bg4.jpg')`, borderRadius: '10px', marginBottom: '40px' }}>
+        <Typography variant="h4" gutterBottom style={{fontWeight: 'bold',color:'white', marginBottom: '20px' }}>Certifications:</Typography>
         <ul style={{ paddingLeft: '20px', marginBottom: '0' }}>
           {certifications.map((certification, index) => (
-            <li key={index} style={{ color: '#333333', marginBottom: '10px' }}>{certification}</li>
+            <li key={index} style={{ marginBottom: '10px' }}>{certification}</li>
           ))}
         </ul>
       </CustomPaper>
 
-      <CustomPaper elevation={3} sx={{ p: 4, backgroundColor: 'white', borderRadius: '10px', marginBottom: '40px' }}>
-        <Typography variant="h4" gutterBottom style={{ color: '#00308F', fontWeight: 'bold', marginBottom: '20px' }}>Acquisition:</Typography>
+      <CustomPaper elevation={3} sx={{ p: 4, color:'white',backgroundImage: `url('/images/bg13.jpg')`, borderRadius: '10px', marginBottom: '40px' }}>
+        <Typography variant="h4" gutterBottom style={{ color: 'white', fontWeight: 'bold', marginBottom: '20px' }}>Acquisition:</Typography>
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <Typography variant="h5" gutterBottom style={{ color: '#00308F', fontWeight: 'bold' }}>Naics:</Typography>
+            <Typography variant="h5" gutterBottom style={{ color: 'white', fontWeight: 'bold' }}>Naics:</Typography>
             <ul style={{ paddingLeft: '20px', marginBottom: '0' }}>
               {acquisition.naics.map((naic, index) => (
-                <li key={index} style={{ color: '#333333', marginBottom: '10px' }}>{naic}</li>
+                <li key={index} style={{ color: 'white', marginBottom: '10px' }}>{naic}</li>
               ))}
             </ul>
           </Grid>
           <Grid item xs={6}>
-            <Typography variant="h5" gutterBottom style={{ color: '#00308F', fontWeight: 'bold' }}>Psc:</Typography>
+            <Typography variant="h5" gutterBottom style={{ color: 'white', fontWeight: 'bold' }}>Psc:</Typography>
             <ul style={{ paddingLeft: '20px', marginBottom: '0' }}>
               {acquisition.psc.map((psc, index) => (
-                <li key={index} style={{ color: '#333333', marginBottom: '10px' }}>{psc}</li>
+                <li key={index} style={{ color: 'white', marginBottom: '10px' }}>{psc}</li>
               ))}
             </ul>
           </Grid>
         </Grid>
       </CustomPaper>
 
-      <CustomPaper elevation={3} sx={{ p: 4, backgroundColor: 'white', borderRadius: '10px', marginBottom: '40px' }}>
-        <Typography variant="h4" gutterBottom style={{ color: '#00308F', fontWeight: 'bold', marginBottom: '20px' }}>Contract Vehicles:</Typography>
+      <CustomPaper elevation={3} sx={{ p: 4, color:'white',backgroundImage: `url('/images/bg27.jpg')`, borderRadius: '10px', marginBottom: '40px' }}>
+        <Typography variant="h4" gutterBottom style={{ color: 'white', fontWeight: 'bold', marginBottom: '20px' }}>Contract Vehicles:</Typography>
         {Object.keys(contractVehicles).map((vehicle, index) => (
-          <Paper key={index} elevation={3} sx={{ p: 4, backgroundColor: '#ADD8E6', borderRadius: '10px', marginBottom: '20px' }}>
-            <Typography variant="h5" gutterBottom style={{ color: '#00308F', fontWeight: 'bold', marginBottom: '10px' }}>{vehicle}</Typography>
-            <Typography variant="body1" style={{ color: '#333333', lineHeight: '1.6' }}>{contractVehicles[vehicle]}</Typography>
+          <Paper key={index} elevation={3} sx={{ p: 4,  backgroundImage: `url('/images/bg17.jpg')`,
+          borderRadius: '10px', marginBottom: '20px' }}>
+            <Typography variant="h5" gutterBottom style={{ color: 'white', fontWeight: 'bold', marginBottom: '10px' }}>{vehicle}</Typography>
+            <Typography variant="body1" style={{ color: 'white', lineHeight: '1.6' }}>{contractVehicles[vehicle]}</Typography>
           </Paper>
         ))}
       </CustomPaper>
