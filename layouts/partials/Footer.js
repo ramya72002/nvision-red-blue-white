@@ -10,7 +10,7 @@ const Footer = () => {
   const { copyright, footer_content } = config.params;
   const { footer } = menu;
   return (
-    <footer className="section bg-theme-light pb-0" style={{ color: 'white' ,backgroundImage: `url('/images/bg17.jpg')`,
+    <footer className="section  pb-0" style={{ color: 'white' ,backgroundImage: `url('/images/bg17.jpg')`,
   }}>
       <div className="container" style={{ color: 'white' }}>
         {/* footer menu */}
