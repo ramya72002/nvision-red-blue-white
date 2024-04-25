@@ -52,7 +52,7 @@ const Home = ({ frontmatter }) => {
       
 
       {/* Features */}
-      <section className="section bg-theme-light" style={{ backgroundImage: `url('/images/bg21.jpg')` }}>
+      <section className="section bg-theme-light" style={{ backgroundImage: `url('/images/bg10.jpg')` }}>
       <div className="container">
         <div className="text-center">
           <h2 style={{ color: 'white' }}>{markdownify(feature.title)}</h2>
@@ -87,7 +87,7 @@ const Home = ({ frontmatter }) => {
       {services.map((service, index) => {
   const isOdd = index % 2 > 0;
   const sectionClasses = `section ${isOdd ? "bg-theme-light" : ""}`; // Add "bg-theme-light" class for odd-indexed sections
-  const backgroundImage = isOdd ?  `url('/images/bg21.jpg')` : ""; // Add background image for odd-indexed sections
+  const backgroundImage = isOdd ?  `url('/images/bg10.jpg')` : ""; // Add background image for odd-indexed sections
   const contentTextColor = isOdd ? "text-white" : "red"; // Set text color to white for bg-theme-light sections
 
   return (
