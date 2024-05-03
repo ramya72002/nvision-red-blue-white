@@ -3,6 +3,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import EmailIcon from '@mui/icons-material/Email';
 import { Typography, Container, Grid, TextField, TextareaAutosize, Button, Box } from '@mui/material';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic'
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -76,6 +77,7 @@ const Contact = ({ data }) => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <TextField
+              style={{ backgroundColor:'white'}}
                 fullWidth
                 margin="normal"
                 label="Name"
@@ -83,6 +85,7 @@ const Contact = ({ data }) => {
                 required
               />
               <TextField
+              style={{ backgroundColor:'white'}}
                 fullWidth
                 margin="normal"
                 label="Email"
@@ -91,6 +94,7 @@ const Contact = ({ data }) => {
                 required
               />
               <TextField
+                style={{ backgroundColor:'white'}}
                 fullWidth
                 margin="normal"
                 label="Subject"
@@ -120,4 +124,4 @@ const Contact = ({ data }) => {
   );
 };
 
-export default Contact;
+export default dynamic (() => Promise.resolve(Contact), {ssr: false})
