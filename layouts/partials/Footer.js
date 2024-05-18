@@ -33,7 +33,7 @@ const Footer = () => {
           })}
           {/* social icons */}
           <div className="md-12 sm:col-6 lg:col-3" style={{ color: 'white' }}>
-            <Link href="/" aria-label="Nvision">
+            <Link href="/" aria-label="NVision">
               <Image
                 src={config.site.logo}
                 width={config.site.logo_width}

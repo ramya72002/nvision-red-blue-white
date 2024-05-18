@@ -19,22 +19,22 @@ feature:
   features:
     - name: "Clean Code"
       icon: "/images/code.svg"
-      content: "At Nvision, code is our canvas, and Clean Code is our masterpiece, ensuring software elegance and efficiency in every project."
+      content: "At NVision, code is our canvas, and Clean Code is our masterpiece, ensuring software elegance and efficiency in every project."
     - name: "Object Oriented"
       icon: "/images/oop.svg"
-      content: "Nvision: Where innovation meets precision, crafting Object-Oriented solutions for a seamless digital landscape."
+      content: "NVision: Where innovation meets precision, crafting Object-Oriented solutions for a seamless digital landscape."
     - name: "24h Service"
       icon: "/images/user-clock.svg"
-      content: "Nvision: Unleashing innovation around the clock, our 24/7 service commitment ensures your digital needs never rest."
+      content: "NVision: Unleashing innovation around the clock, our 24/7 service commitment ensures your digital needs never rest."
     - name: "Value for Money"
       icon: "/images/love.svg"
-      content: "Nvision: Elevating your vision with unparalleled expertise, we redefine value for money in every solution we deliver."
+      content: "NVision: Elevating your vision with unparalleled expertise, we redefine value for money in every solution we deliver."
     - name: "Faster Response"
       icon: "/images/speedometer.svg"
-      content: "Nvision: Empowering your success with a commitment to faster response times, ensuring swift and agile solutions for your evolving needs."
+      content: "NVision: Empowering your success with a commitment to faster response times, ensuring swift and agile solutions for your evolving needs."
     - name: "Cloud Support"
       icon: "/images/cloud.svg"
-      content: "Nvision: Empowering your journey to new heights, our Cloud Support is the cornerstone of seamless innovation and reliability."
+      content: "NVision: Empowering your journey to new heights, our Cloud Support is the cornerstone of seamless innovation and reliability."
 
 # services
 services:
@@ -69,8 +69,8 @@ services:
       label: Connect with us for more info
       link: /contact
 
-  - title: "Nvision standing different from others"
-    content: "Our social construct is based on constant collaboration and finding new ways to solve problems. Learning is at the crux of our growth process, and we encourage constant learning across domains. We believe in nurturing the spark of curiosity, and we are open to new ideas from everyone in our Nvision community."
+  - title: "NVision standing different from others"
+    content: "Our social construct is based on constant collaboration and finding new ways to solve problems. Learning is at the crux of our growth process, and we encourage constant learning across domains. We believe in nurturing the spark of curiosity, and we are open to new ideas from everyone in our NVision community."
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"

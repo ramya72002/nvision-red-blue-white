@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "Nvision Nextjs",
+    "title": "NVision Nextjs",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",
     "logo_height": "70",
-    "logo_text": "Nvision"
+    "logo_text": "NVision"
   },
 
   "settings": {
@@ -24,12 +24,12 @@
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
-    "footer_content": "Nvision: Transforming visions into reality, crafting innovative enterprise IT solutions for a future-driven world.",
-    "copyright": "Designed and Developed By Nvision"
+    "footer_content": "NVision: Transforming visions into reality, crafting innovative enterprise IT solutions for a future-driven world.",
+    "copyright": "Designed and Developed By NVision"
   },
 
   "metadata": {
-    "meta_author": "Nvision",
+    "meta_author": "NVision",
     "meta_image": "",
     "meta_description": "A SAAS template for nextjs"
   }

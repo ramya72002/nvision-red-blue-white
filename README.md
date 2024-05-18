@@ -1,4 +1,4 @@
-<h1 align=center>Nvision Nextjs</h1> 
+<h1 align=center>NVision Nextjs</h1> 
  
 <!-- installation -->
 ## ⚙️Installation
@@ -7,19 +7,19 @@ After downloading the template, you have some prerequisites to install. Then you
 
 ### 🔧Install prerequisites (once for a machine)
 
-* **Node Installation:** [Install node js](https://nodejs.org/en/download/) [Recommended LTS version]
+- **Node Installation:** [Install node js](https://nodejs.org/en/download/) [Recommended LTS version]
 
 ### 🖥️Local setup
 
 After successfully installing those dependencies, open this template with any IDE [[VS Code](https://code.visualstudio.com/) recommended], and then open the internal terminal of IDM [vs code shortcut <code>ctrl/cmd+\`</code>]
 
-* Install dependencies
+- Install dependencies
 
 ```
 npm install --force
 ```
 
-* Run locally
+- Run locally
 
 ```
 npm run dev
@@ -34,5 +34,3 @@ After finishing all the customization, you can create a production build by runn
 ```
 npm run build
 ```
- 
-

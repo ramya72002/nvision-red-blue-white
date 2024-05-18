@@ -40,7 +40,7 @@ content:
       Work location can be St. Louis, San Antonio, Chicago, Dayton, or remote with occasional travel. US Citizens and all other parties authorized to work in the US are encouraged to apply. We are unable to sponsor at this time.
 
       Please submit your resume with rate, current location, and visa status to recruiter@nvisioninfotech.com. No Third Party candidates. St. Louis Local Candidates only.
-    
+
     applyInstructions: |
       Please submit your resume with rate, current location, and visa status to recruiter@nvisioninfotech.com. No Third Party candidates. St. Louis Local Candidates only.
 ---
