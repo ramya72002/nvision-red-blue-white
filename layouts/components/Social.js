@@ -27,7 +27,6 @@ import {
   IoLogoVimeo,
   IoLogoVk,
   IoLogoWhatsapp,
-  IoLogoYoutube,
   IoMail,
 } from "react-icons/io5";
 
@@ -36,7 +35,6 @@ const Social = ({ source, className }) => {
     facebook,
     twitter,
     instagram,
-    youtube,
     linkedin,
     github,
     gitlab,
@@ -99,18 +97,6 @@ const Social = ({ source, className }) => {
             rel="noopener noreferrer nofollow"
           >
             <IoLogoInstagram />
-          </a>
-        </li>
-      )}
-      {youtube && (
-        <li className="inline-block">
-          <a
-            aria-label="youtube"
-            href={youtube}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
-            <IoLogoYoutube />
           </a>
         </li>
       )}
