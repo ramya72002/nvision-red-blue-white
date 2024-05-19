@@ -18,6 +18,7 @@ const PublicSector = ({ data }) => {
       content,
       certifications,
       acquisition,
+      DUNSU,
       'contract vehicles': contractVehicles,
     },
   } = data;
@@ -63,6 +64,15 @@ const PublicSector = ({ data }) => {
             </ul>
           </Grid>
         </Grid>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <Typography variant="h5" gutterBottom style={{ color: 'white', fontWeight: 'bold', marginRight: '20px' }}>
+          DUNSU / UEI / CAGE CODE :
+        </Typography>
+        <Typography variant="body1" style={{ lineHeight: '1.6' }}>
+          {DUNSU}
+        </Typography>
+</div>
+
       </CustomPaper>
 
       <CustomPaper elevation={3} sx={{ p: 4, color:'white',backgroundImage: `url('/images/bg27.jpg')`, borderRadius: '10px', marginBottom: '40px' }}>

@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Us"
 layout: about
 draft: false
 sections:

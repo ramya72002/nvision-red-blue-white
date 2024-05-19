@@ -35,7 +35,7 @@ acquisition:
     - D310 – Cyber Security & Data Backup
     - D312 – Optical Scanning
 
-DUNSU / UEI / CAGE CODE: 078315527 / GHLQKJHCAGC1 / 6LV78
+DUNSU: 078315527 / GHLQKJHCAGC1 / 6LV78
 
 contract vehicles:
   Multiple Award Schedule(MAS) (GS-35F-414DA): |
