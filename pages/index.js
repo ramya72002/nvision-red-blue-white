@@ -91,53 +91,52 @@ const Home = ({ frontmatter }) => {
   const contentTextColor = isOdd ? "text-white" : "red"; // Set text color to white for  sections
 
   return (
-    <section key={`service-${index}`} className={sectionClasses} style={{backgroundImage}}>
-      <div className="container">
-        <div className="items-center gap-8 md:grid md:grid-cols-2">
-          {/* Carousel */}
-          <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              pagination={
-                service.images.length > 1 ? { clickable: true } : false
-              }
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              init={service?.images > 1 ? false : true}
-            >
-              {/* Slides */}
-              {service?.images.map((slide, index) => (
-                <SwiperSlide key={index}>
-                  <Image src={slide} alt="" width={600} height={500} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* Content */}
-          <div
-            className={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"}`}
-          >
-            <h2 className={`font-bold leading-[40px] ${contentTextColor}`}>{service?.title}</h2>
-            <p className={`mt-4 mb-2 ${contentTextColor}`}>{service?.content}</p>
-            {service.button.enable && (
-              <Link href={service?.button.link} className={`cta-link inline-flex items-center ${contentTextColor}`}>
-                {service?.button.label}
-                <Image
-                  className="ml-1"
-                  src="/images/arrow-right.svg"
-                  width={18}
-                  height={14}
-                  alt="arrow"
-                />
-              </Link>
-            )}
-          </div>
-        </div>
+    <section key={`service-${index}`} className={sectionClasses} style={{ backgroundImage }}>
+  <div className="container">
+    <div className="items-center gap-8 md:grid md:grid-cols-2">
+      {/* Carousel */}
+      <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          pagination={service.images.length > 1 ? { clickable: true } : false}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          init={service?.images > 1 ? false : true}
+        >
+          {/* Slides */}
+          {service?.images.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <Image src={slide} alt="" width={600} height={500} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </section>
+
+      {/* Content */}
+      <div
+        className={`service-content mt-5 md:mt-0 p-5 ${!isOdd && "md:order-1"}`}
+      >
+        <h2 className={`font-bold leading-[40px] ${contentTextColor}`}>{service?.title}</h2>
+        <p className={`mt-4 mb-2 ${contentTextColor}`}>{service?.content}</p>
+        {service.button.enable && (
+          <Link href={service?.button.link} className={`cta-link inline-flex items-center ${contentTextColor}`}>
+            <span style={{ color: 'red' }}>{service?.button.label}</span>
+            <Image
+              className="ml-1"
+              src="/images/arrow-right.svg"
+              width={18}
+              height={14}
+              alt="arrow"
+            />
+          </Link>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
   );
 })}
 
