@@ -49,6 +49,5 @@ contract vehicles:
   Contractor’s STARS III Program Manager: |
     Venkat Pulumati
     [vpulumati@nvisioninfotech.com]
-    (mailto:vpulumati@nvisioninfotech.com)
     314-249-0824
 ---
