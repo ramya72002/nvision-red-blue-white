@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/system';
 
-// Styled components for custom styling
 const StyledServiceItem = styled('div')({
-  display: 'flex', // Display items in a flex container
-  alignItems: 'center', // Center items vertically
+  display: 'flex',
+  alignItems: 'center',
   padding: '20px',
   borderRadius: '15px',
   boxShadow: '0px 20px 30px -10px rgb(38, 57, 77)',
-  transition: 'transform 0.3s ease-in-out', // Add transition for zoom effect
-  overflow: 'hidden', // Hide overflow content if it exceeds the specified height
+  transition: 'transform 0.3s ease-in-out',
+  overflow: 'hidden',
   '&:hover': {
-    transform: 'scale(1.01)', // Zoom in effect on hover
+    transform: 'scale(1.01)',
   },
 });
 
 const StyledImage = styled('img')({
-  width: '20%', // Set width of image container
-  borderRadius: '20px', // Rounded corners for image container
-  marginRight: '20px', // Add margin to the right for spacing between image and content
+  width: '20%',
+  borderRadius: '20px',
+  marginRight: '20px',
 });
 
 const StyledContent = styled('div')({
-  flex: '1', // Take up remaining space for the content
+  flex: '1',
 });
 
 const Services = ({ data }) => {
@@ -30,10 +29,9 @@ const Services = ({ data }) => {
     frontmatter: { title, services },
   } = data;
 
-  const [expandedServiceIndex, setExpandedServiceIndex] = useState(null); // Track index of the expanded service
+  const [expandedServiceIndex, setExpandedServiceIndex] = useState(null);
 
   useEffect(() => {
-    // Reset expanded service index when component unmounts
     return () => {
       setExpandedServiceIndex(null);
     };
@@ -49,8 +47,8 @@ const Services = ({ data }) => {
             key={index}
             className={`bg-white p-6 rounded-md mt-8`}
             style={{
-              height: expandedServiceIndex === index ? 'auto' : '300px', // Set height based on whether the service is expanded
-              flexDirection: index % 2 === 0 ? 'row' : 'row-reverse', // Reverse flex direction for odd indices
+              height: expandedServiceIndex === index ? 'auto' : 'fit-content', // Updated height to fit content
+              flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
             }}
           >
             <StyledImage
